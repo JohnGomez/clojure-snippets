@@ -1,0 +1,289 @@
+{
+	"ns": {
+		"prefix": "ns",
+		"body": [
+			"(ns $0)"
+		],
+		"description": "Namespace definition"
+	},
+
+	"require": {
+		"prefix": "require",
+		"body": [
+			"(require '$0)"
+		],
+		"description": "Import"
+	},
+	
+	":require": {
+		"prefix": "require-as", // ???
+		"body": [
+			"(:require [${1:namespace} :as ${2:alias}])"
+		],
+		"description": "Import"
+	},
+
+	":use": {
+		"prefix": ":use", // ???
+		"body": [
+			"(:use [$0])"
+		],
+		"description": "Import"
+	},
+
+	//Tests
+	"equals-zero": {
+		"prefix": "zero?",
+		"body": [
+			"(zero? $0)"
+		],
+		"description": "if equals zero, return true"
+	},
+
+	"null": {
+		"prefix": "nil?",
+		"body": [
+			"(nil? $0)"
+		],
+		"description": "if nil, return true"
+	},
+
+	"is-a-number": {
+		"prefix": "number?",
+		"body": [
+			"(number? $0)"
+		],
+		"description": "if is number, return true"
+	},
+
+	"positive-number": {
+		"prefix": "pos?",
+		"body": [
+			"(pos? $0)"
+		],
+		"description": "if positive number, return true"
+	},
+
+	"negative-number": {
+		"prefix": "neg?",
+		"body": [
+			"(neg? $0)"
+		],
+		"description": "if negative number, return true"
+	},
+
+	"even": {
+		"prefix": "even?",
+		"body": [
+			"(even? $0)"
+		],
+		"description": "if even, return true"
+	},
+
+	// Definition
+	"def": {
+		"prefix": "def",
+		"body": [
+			"(def ${1:name} ${2:value})"
+		],
+		"description": "Define a global symbol"
+	},
+
+	"defn": {
+		"prefix": "defn",
+		"body": [
+			"(defn ${1:name} [${2:args}] \n $3)"
+		],
+		"description": "Define a global function"
+	},
+
+	"let": {
+		"prefix": "let",
+		"body": [
+			"(let [$0] \n)"
+		],
+		"description": "Define a local symbol"
+	},
+
+	"atom": {
+		"prefix": "atom",
+		"body": [
+			"(atom $0)"
+		],
+		"description": "create a atom"
+	},
+
+	"swap!": {
+		"prefix": "swap!",
+		"body": [
+			"(swap! ${1:atom} ${2:f})"
+		],
+		"description": "create a atom"
+	},
+
+	//Conditionals
+	"if": {
+		"prefix": "if",
+		"body": [
+			"(if ${1:test} \n ${2:then} \n ${3:else})"
+		],
+		"description": "Evaluates test. If logical true, evaluates and returns then expr, otherwise else expr"
+	},
+
+	"if-do": {
+		"prefix": "ifd",
+		"body": [
+			"(if ${1:test} (do $2 $3))"
+		],
+		"description": "Evaluates test. If logical true, evaluates and returns then expr, otherwise else expr"
+	},
+
+	"if-not": {
+		"prefix": "ifn",
+		"body": [
+			"(if-not ${1:test} ${2:then} ${3:else})"
+		],
+		"description": "Evaluates test. If logical false, evaluates and returns then expr, otherwise else expr, if supplied, else nil."
+	},
+
+	"cond": {
+		"prefix": "cond",
+		"body": [
+			"(cond ${1:test1} ${2:then} ${3:test2} ${4:then} :else ${5:then})"
+		],
+		"description": "Takes a set of test/expr pairs. It evaluates each test one at a time.  If a test returns logical true, cond evaluates and returns the value of the corresponding expr and doesn't evaluate any of the other tests or exprs. (cond) returns nil"
+	},
+
+	"when": {
+		"prefix": "when",
+		"body": [
+			"(when ${1:test} ${2:then})"
+		],
+		"description": "Evaluates test. If logical true, evaluates body in an implicit do."
+	},
+
+	"when-not": {
+		"prefix": "wheno",
+		"body": [
+			"(when-not ${1:test} ${2:then})"
+		],
+		"description": "Evaluates test. If logical false, evaluates body in an implicit do."
+	},
+
+	"when-let": {
+		"prefix": "whenl",
+		"body": [
+			"(when-let [${1:bindings}] ${2:then})"
+		],
+		"description": "When test is true, evaluates body with binding-form bound to the value of test"
+	},
+
+	"when-some": {
+		"prefix": "whens",
+		"body": [
+			"(when-some [${1:bindings}] ${2:then})"
+		],
+		"description": "When test is not nil, evaluates body with binding-form bound to the value of test"
+	},
+
+	"when-first": {
+		"prefix": "whenf",
+		"body": [
+			"(when-first [${1:bindings}] ${2:then})"
+		],
+		"description": "When test is not nil, evaluates body with binding-form bound to the value of test"
+	},
+
+  // Loops & recusivity	
+	"loop": {
+		"prefix": "loop",
+		"body": [
+			"(loop [$1] $2)"
+		],
+		"description": "Loop"
+	},
+
+	"recur": {
+		"prefix": "recur",
+		"body": [
+			"(recur $0)"
+		],
+		"description": "Loop"
+	},
+
+	// Operations in Collections
+	"nth": {
+		"prefix": "nth",
+		"body": [
+			"(nth ${1:coll} ${2:index})"
+		],
+		"description": "get by index"
+	},
+
+	"get": {
+		"prefix": "get",
+		"body": [
+			"(get ${1:map} ${2::key})"
+		],
+		"description": "Get value by Key"
+	},
+
+	"conj": {
+		"prefix": "conj",
+		"body": [
+			"(conj ${1:coll} ${2:value})"
+		],
+		"description": "Returns a new collection with the xs 'added'"
+	},
+
+	"seq": {
+		"prefix": "seq",
+		"body": [
+			"(seq ${0:coll})"
+		],
+		"description": "Get value by Key"
+	},
+
+	"update": {
+		"prefix": "update",
+		"body": [
+			"(update ${1:map} ${2::key} ${3:function})"
+		],
+		"description": "Get value by Key"
+	},
+
+  // Loop operations in Collections
+	"map": {
+		"prefix": "map",
+		"body": [
+			"(map ${1:f} ${2:coll})"
+		],
+		"description": "map simbol"
+	},
+
+	"filter": {
+		"prefix": "filter",
+		"body": [
+			"(filter ${1:pred}  ${2:coll})"
+		],
+		"description": "Aplication filter on  Collection"
+	},
+
+	"reduce": {
+		"prefix": "reduce",
+		"body": [
+			"(reduce ${1:f}  ${2:coll})"
+		],
+		"description": "Reduce"
+	},
+
+	"queue": {
+		"prefix": [
+			"queue"
+		],
+		"body": [
+			"(clojure.lang.PersistentQueue/EMPTY)"
+		],
+		"description": "Persistent Queue Empty"
+	}
+}

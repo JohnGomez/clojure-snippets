@@ -1,0 +1,20 @@
+{
+    "name": "clojure-snippets",
+    "displayName": "Clojure Snippets",
+    "description": "Snippets for Clojure and ClojureScript",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "clojure",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
