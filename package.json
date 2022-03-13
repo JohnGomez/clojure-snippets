@@ -1,14 +1,20 @@
 {
-    "name": "clojure-snippets",
-    "displayName": "Clojure Snippets",
+    "name": "clojure-code-snippets",
+    "displayName": "Clojure Code Snippets",
     "description": "Snippets for Clojure and ClojureScript",
     "version": "0.0.1",
     "engines": {
-        "vscode": "^1.65.0"
+        "vscode": "^1.64.0"
     },
     "categories": [
         "Snippets"
     ],
+
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/JohnGomez/clojure-snippets.git"
+    },
+
     "contributes": {
         "snippets": [
             {
