@@ -1,4 +1,6 @@
 {
+    "publisher": "JohnGomez",
+    "icon": "logo.png",
     "name": "clojure-code-snippets",
     "displayName": "Clojure Code Snippets",
     "description": "Snippets for Clojure and ClojureScript",
@@ -6,9 +8,17 @@
     "engines": {
         "vscode": "^1.64.0"
     },
+
     "categories": [
         "Snippets"
     ],
+
+    "keywords": [
+        "clojure",
+        "clojurescript",
+        "functional",
+        "lisp"
+      ],
 
     "repository": {
       "type": "git",
