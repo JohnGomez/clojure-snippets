@@ -2,7 +2,7 @@
 
 Extension for VsCode: Code Snippers for Clojure
 
-![alt text](./images/clojure-snippets.gif)
+![alt text](https://github.com/JohnGomez/clojure-snippets/blob/master/images/clojure-snippets.gif)
 
 ## Release Notes
 
