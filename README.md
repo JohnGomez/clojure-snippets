@@ -1,9 +1,8 @@
 # Clojure Code Snippets
 
-Extension for VsCode: Code Snippets for Clojure
+The most complete Clojure code snippet for VsCode 
 
 ![gif](https://raw.githubusercontent.com/JohnGomez/clojure-snippets/master/images/clojure-snippets.gif)
-
 
 ## Release Notes
 
