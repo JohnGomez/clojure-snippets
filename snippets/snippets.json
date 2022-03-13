@@ -1,6 +1,5 @@
 {
 
-    // Namespaces
 	"ns": {
 		"prefix": "ns",
 		"body": [
@@ -18,7 +17,7 @@
 	},
 	
 	":require": {
-		"prefix": "require-as", // the best alias for it funcion???
+		"prefix": "require-as", 
 		"body": [
 			"(:require [${1:namespace} :as ${2:alias}])"
 		],
@@ -26,14 +25,13 @@
 	},
 
 	":use": {
-		"prefix": "use", // the best alias for it funcion???
+		"prefix": "use", 
 		"body": [
 			"(:use [$0])"
 		],
 		"description": "Like 'require, but also refers to each lib's namespace using clojure.core/refer"
 	},
 
-  // Strings
 	"print": {
 		"prefix": "print", 
 		"body": [
@@ -58,7 +56,6 @@
 		"description": ""
 	},
 
-	//Tests
 	"equals-zero": {
 		"prefix": "zero?",
 		"body": [
@@ -115,7 +112,6 @@
 		"description": "if is a even number, return true"
 	},
 
-    //Logic operators
     "and": {
 		"prefix": "and",
 		"body": [
@@ -140,7 +136,6 @@
 		"description": ""
 	},
 
-	// Definition and creation of symbols and functions
 	"def": {
 		"prefix": "def",
 		"body": [
@@ -189,7 +184,6 @@
 		"description": "Atomically swaps the value of atom"
 	},
 
-	//Conditionals
 	"if": {
 		"prefix": "if",
 		"body": [
@@ -278,7 +272,6 @@
 		"description": "When test is not nil, evaluates body with binding-form bound to the value of test"
 	},
 
-  // Loops & recusivity	
 	"loop": {
 		"prefix": "loop",
 		"body": [
@@ -295,7 +288,6 @@
 		"description": "Loop"
 	},
 
-	// Operations on Collections
 	"nth": {
 		"prefix": "nth",
 		"body": [
@@ -432,7 +424,6 @@
 		"description": "Get value by Key"
 	},
 
-  // Loop operations on Collections
 	"map": {
 		"prefix": "map",
 		"body": [
@@ -466,7 +457,6 @@
 		"description": "Persistent Queue Empty"
 	},
 
-    //Exceptions
     "throw": {
 		"prefix": "throw",
 		"body": [
@@ -489,5 +479,5 @@
 			"(try $0 \n (catch Exception e ) \n (finally ))"
 		],
 		"description": ""
-	},
+	}
 }

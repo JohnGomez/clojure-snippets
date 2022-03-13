@@ -19,7 +19,7 @@
         "snippets": [
             {
                 "language": "clojure",
-                "path": "./snippets/snippets.code-snippets"
+                "path": "./snippets/snippets.json"
             }
         ]
     }
