@@ -427,7 +427,7 @@
     "update-in": {
 		"prefix": "update-in",
 		"body": [
-			"(update-in ${1:map} [${2:i} ${3::key}] ${3:f})"
+			"(update-in ${1:map} [${2:i} ${3::key}] ${4:f})"
 		],
 		"description": "Get value by Key"
 	},
