@@ -1,7 +1,7 @@
 {
-    "name": "clojure-snippets",
-    "displayName": "Clojure Snippets",
-    "description": "Snippets for Clojure and ClojureScript",
+    "name": "clojure-code-snippets",
+    "displayName": "Clojure Code Snippets",
+    "description": "Code Snippets for Clojure and ClojureScript",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.65.0"
@@ -13,7 +13,7 @@
         "snippets": [
             {
                 "language": "clojure",
-                "path": "./snippets/snippets.code-snippets"
+                "path": "./snippets/snippets.json"
             }
         ]
     }
