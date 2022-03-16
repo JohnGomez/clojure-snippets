@@ -48,6 +48,22 @@
 		"description": ""
 	},
 
+	"pr": {
+		"prefix": "pr", 
+		"body": [
+			"(prn $0)"
+		],
+		"description": ""
+	},
+	
+	"prn": {
+		"prefix": "prn", 
+		"body": [
+			"(prn $0)"
+		],
+		"description": ""
+	},
+
     "str": {
 		"prefix": "str", 
 		"body": [
@@ -166,6 +182,14 @@
 			"(let [$0] \n)"
 		],
 		"description": "Define locals symbols"
+	},
+
+	"comp": {
+		"prefix": "comp",
+		"body": [
+			"(comp $0)"
+		],
+		"description": "Takes a set of functions and returns a fn that is the composition of those fns"
 	},
 
 	"atom": {
@@ -302,6 +326,14 @@
 			"(get ${1:map} ${2::key})"
 		],
 		"description": "Get value by Key"
+	},
+
+	"get-in": {
+		"prefix": "geti",
+		"body": [
+			"(get-in ${1:map} [$2])"
+		],
+		"description": "Get value by Key in collection"
 	},
 
     "first": {
