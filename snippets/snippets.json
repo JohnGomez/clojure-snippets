@@ -395,7 +395,7 @@
     "dissoc": {
 		"prefix": "dissoc",
 		"body": [
-			"(assoc ${1:map} ${2::key})"
+			"(dissoc ${1:map} ${2::key})"
 		],
 		"description": "dissoc[iate]. Returns a new map of the same (hashed/sorted) type, that does not contain a mapping for key(s)"
 	},
